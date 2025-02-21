@@ -14,7 +14,7 @@ const SearchBar: FC = () => {
         className="text-brand-page-title"
       />
       <input
-        className="flex-1 bg-transparent"
+        className="flex-1 bg-transparent font-geist"
         name="search"
         id="search"
         placeholder="Search..."

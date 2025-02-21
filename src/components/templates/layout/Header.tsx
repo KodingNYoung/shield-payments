@@ -8,7 +8,7 @@ import Avatar from "@/components/atoms/Avatar"
 
 const Header: FC = () => {
   return (
-    <header className="flex items-center justify-between h-14 sm:h-[72px] sm:border-b border-brand-sidebar px-4 lg:px-10 py-3 lg:py-4 gap-8">
+    <header className="flex items-center justify-between h-14 sm:h-[72px] sm:border-b border-brand-sidebar px-4 lg:px-10 py-3 lg:py-4 gap-8 sticky top-0 bg-white">
       <SidebarToggleButton />
       <PageTitle />
       <div className="hidden md:block flex-1 max-w-[450px]">

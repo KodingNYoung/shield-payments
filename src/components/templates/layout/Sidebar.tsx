@@ -30,7 +30,7 @@ const Sidebar: FC = () => {
       </div>
       <SidebarNav />
       <DarkModeToggle />
-      <div className="text-[#BABABC] py-4 text-xs border-t border-[#EDEDEF] text-center">
+      <div className="text-[#BABABC] py-4 text-xs border-t border-[#EDEDEF] text-center font-geist">
         © 2025 Sheild Payments V.1.0
       </div>
     </aside>

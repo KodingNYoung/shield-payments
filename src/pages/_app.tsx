@@ -5,7 +5,7 @@ import type { AppProps } from "next/app"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${geist.variable} ${inter.variable}`}>
+    <div className={`${geist.variable} ${inter.variable}`}>
       <style jsx global>{`
         html {
           font-family: ${inter.style.fontFamily};
@@ -14,6 +14,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </main>
+    </div>
   )
 }
