@@ -33,8 +33,8 @@ const payCardData: (PayCardProps & { id: number })[] = [
 
 const Pay: FC = () => {
   return (
-    <main className="p-4 lg:p-10 flex flex-col gap-10">
-      <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] max-w-full  gap-4">
+    <main className="sm:p-4 lg:p-10 flex flex-col gap-10">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] max-w-full  gap-4 px-4 sm:px-0">
         {payCardData.map(({ id, ...data }) => (
           <PayCard key={id} {...data} />
         ))}
