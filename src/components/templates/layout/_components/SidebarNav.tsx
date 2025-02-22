@@ -1,7 +1,7 @@
 import { ROUTES } from "@/utils/constants"
 import { IconNames } from "@/utils/iconNames"
 import React from "react"
-import NavItem from "./NavItem"
+import dynamic from "next/dynamic"
 
 type Route = {
   icon: IconNames
@@ -36,6 +36,8 @@ const SIDEBAR_ROUTES: Route[] = [
     id: 4,
   },
 ]
+
+const NavItem = dynamic(() => import("./NavItem"), { ssr: false })
 
 const SidebarNav = () => {
   return (

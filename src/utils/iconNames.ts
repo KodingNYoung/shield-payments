@@ -11,6 +11,7 @@ export type IconNames =
   | "icon-coin"
   | "icon-copy"
   | "icon-eye"
+  | "icon-eye-off"
   | "icon-menu"
   | "icon-moneys"
   | "icon-money-add"
