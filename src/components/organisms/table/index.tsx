@@ -9,7 +9,7 @@ type Slots = "root" | "table" | "thead" | "thr" | "th" | "tbody" | "tbr" | "td"
 type Props<T> = {
   columns: TableColumn<T>[]
   data: T[]
-  onRowClick?: (row: unknown) => void
+  onRowClick?: (row: T) => void
   classNames?: { [slot in Slots]?: TWClassNames }
 }
 

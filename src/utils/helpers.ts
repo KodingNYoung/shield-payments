@@ -46,3 +46,7 @@ export const formatAmount = (num: number, compress?: boolean) => {
 
   return `${CURRENCY}${formatted}`
 }
+
+export const copy = (text: string) => {
+  navigator.clipboard.writeText(text)
+}

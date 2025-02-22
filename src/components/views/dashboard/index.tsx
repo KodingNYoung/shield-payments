@@ -2,8 +2,8 @@ import { FC } from "@/utils/types"
 import React from "react"
 import TotalBalances from "./TotalBalances"
 import PortfolioBreakdown from "./PortfolioBreakdown"
-import RecentTransactions from "../../templates/RecentTransactions"
 import { TRANSACTIONS } from "@/utils/dummy"
+import RecentTransactions from "@/components/templates/recent-transactions-table"
 
 const Dashboard: FC = () => {
   return (

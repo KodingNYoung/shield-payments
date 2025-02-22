@@ -2,12 +2,13 @@
 
 import { ASSETS } from "@/utils/dummy"
 import { formatAmount } from "@/utils/helpers"
+import { useMounted } from "@/utils/hooks"
 import { FC } from "@/utils/types"
-import React, { useEffect, useMemo, useState } from "react"
+import React, { useMemo } from "react"
 import { Cell, Legend, Pie, PieChart, Tooltip } from "recharts"
 
 const PortfolioBreakdownChart: FC = () => {
-  const [mounted, setMounted] = useState(false)
+  const isMounted = useMounted()
 
   const data = useMemo(
     () =>
@@ -19,11 +20,7 @@ const PortfolioBreakdownChart: FC = () => {
     []
   )
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  return !mounted ? null : (
+  return !isMounted ? null : (
     <section className="sm:bg-brand-sidebar rounded-x20 w-[400px] max-w-full flex justify-center items-center">
       <div className="relative w-fit">
         <div className="relative z-[1]">

@@ -49,4 +49,5 @@ export type Transaction = {
   amountRecieved: number
   status: TransactionStatus
   description: string
+  recipient: string
 }
