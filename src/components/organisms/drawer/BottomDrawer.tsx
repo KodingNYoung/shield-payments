@@ -21,7 +21,7 @@ const BottomDrawer: FC<Props> = ({ children, classNames, ...props }) => {
       classNames={{
         ...classNames,
         drawer: cls(
-          "p-0 right-[unset] w-full max-h-[80vh] -bottom-1",
+          "!p-0 right-[unset] w-full max-h-[80vh] -bottom-1",
           classNames?.drawer
         ),
         content: cls("rounded-b-none overflow-y-auto", classNames?.content),
