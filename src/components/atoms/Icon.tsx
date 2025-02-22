@@ -9,7 +9,13 @@ export type IconProps = HTMLProps<HTMLSpanElement> & {
   size?: number | string
 }
 
-const Icon: FC<IconProps> = ({ className, name, size, ...props }) => {
+const Icon: FC<IconProps> = ({
+  className,
+  name,
+  style,
+  size = 14,
+  ...props
+}) => {
   return (
     <span
       style={{
@@ -18,12 +24,9 @@ const Icon: FC<IconProps> = ({ className, name, size, ...props }) => {
             ? `${size}px`
             : size
           : undefined,
+        ...style,
       }}
-      className={cls(
-        "text-inherit text-regular-sm !leading-none",
-        name,
-        className
-      )}
+      className={cls("text-inherit", name, className)}
       {...props}
     />
   )
