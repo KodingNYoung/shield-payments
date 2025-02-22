@@ -1,8 +1,8 @@
-import RecentTransactions from "@/components/templates/RecentTransactions"
 import { TRANSACTIONS } from "@/utils/dummy"
 import { FC } from "@/utils/types"
 import React from "react"
 import PayCard, { PayCardProps } from "./_components/PayCard"
+import RecentTransactions from "@/components/templates/recent-transactions-table"
 
 const payCardData: (PayCardProps & { id: number })[] = [
   {

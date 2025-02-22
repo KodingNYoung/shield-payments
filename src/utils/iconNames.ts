@@ -5,6 +5,7 @@ export type IconNames =
   | "icon-card-pos"
   | "icon-category"
   | "icon-chart-2"
+  | "icon-check"
   | "icon-chevron-up"
   | "icon-close"
   | "icon-coin"

@@ -1,3 +1,6 @@
+import { BadgeVariant } from "@/components/atoms/Badge"
+import { TransactionStatus } from "./types"
+
 export const ROUTES = {
   DASHBOARD: "/",
   WALLET: "/wallet",
@@ -13,4 +16,12 @@ export const ASSET_CLASSES = {
   CRYPTO: "Crypto",
   STOCKS: "Stocks",
   BONDS: "Bonds",
+} as const
+
+export const TXN_STATUS_BADGE_VARIANT_MAP: {
+  [status in TransactionStatus]: BadgeVariant
+} = {
+  pending: "default",
+  approved: "success",
+  failed: "error",
 } as const

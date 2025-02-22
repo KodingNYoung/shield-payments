@@ -1,15 +1,13 @@
-import Badge, { BadgeVariant } from "@/components/atoms/Badge"
+"use client"
+
+import Badge from "@/components/atoms/Badge"
 import Icon from "@/components/atoms/Icon"
 import Table from "@/components/organisms/table"
-import { FC, TableColumn, Transaction, TransactionStatus } from "@/utils/types"
+import { FC, TableColumn, Transaction } from "@/utils/types"
 import dayjs from "dayjs"
-import React from "react"
-
-const statusBadgeVariantMap: { [status in TransactionStatus]: BadgeVariant } = {
-  pending: "default",
-  approved: "success",
-  failed: "error",
-}
+import React, { useState } from "react"
+import TxnInfoDrawer from "./TxnInfoDrawer"
+import { TXN_STATUS_BADGE_VARIANT_MAP } from "@/utils/constants"
 
 const columns: TableColumn<Transaction>[] = [
   {
@@ -36,7 +34,7 @@ const columns: TableColumn<Transaction>[] = [
           {row.amountTendered} CAD
         </span>
         <Badge
-          variant={statusBadgeVariantMap[row.status]}
+          variant={TXN_STATUS_BADGE_VARIANT_MAP[row.status]}
           className="block sm:hidden capitalize"
         >
           {row.status}
@@ -66,7 +64,10 @@ const columns: TableColumn<Transaction>[] = [
     title: "Status",
     classNames: { cell: "hidden sm:table-cell" },
     render: (row) => (
-      <Badge variant={statusBadgeVariantMap[row.status]} className="capitalize">
+      <Badge
+        variant={TXN_STATUS_BADGE_VARIANT_MAP[row.status]}
+        className="capitalize"
+      >
         {row.status}
       </Badge>
     ),
@@ -86,6 +87,7 @@ type Props = {
 }
 
 const RecentTransactions: FC<Props> = ({ transactions }) => {
+  const [drawerData, setDrawerData] = useState<Transaction>()
   return (
     <section className="flex flex-col gap-6 px-4 sm:px-0">
       <header>
@@ -100,6 +102,12 @@ const RecentTransactions: FC<Props> = ({ transactions }) => {
           tbr: "cursor-pointer hover:bg-brand-sidebar transition-colors",
           td: "px-0 sm:px-4",
         }}
+        onRowClick={(row) => setDrawerData(row)}
+      />
+      <TxnInfoDrawer
+        isOpen={Boolean(drawerData)}
+        close={() => setDrawerData(undefined)}
+        transaction={drawerData}
       />
     </section>
   )
