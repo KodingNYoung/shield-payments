@@ -15,7 +15,7 @@ const Sidebar: FC = () => {
   return (
     <aside
       className={cls(
-        "fixed w-full md:w-[250px] h-full bg-brand-sidebar flex flex-col gap-3 p-4 pb-6 border-r border-brand-border border-opacity-50 md:left-0 transition-[left] duration-200",
+        "fixed z-10 w-full md:w-[250px] h-full bg-brand-sidebar flex flex-col gap-3 p-4 pb-6 border-r border-brand-border border-opacity-50 md:left-0 transition-[left] duration-200",
         isCollapsed ? "-left-full" : "left-0"
       )}
     >
