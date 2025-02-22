@@ -12,10 +12,10 @@ const TotalBalances: FC = () => {
           title="My Savings"
           amount={0}
           subtitle={
-            <span className="text-sm text-brand-close-btn">
-              <span className="text-success-text">{formatAmount(0.03)}</span>{" "}
-              earned
-            </span>
+            <>
+              {formatAmount(0.03)}
+              <span className="text-brand-close-btn">earned</span>
+            </>
           }
           primaryAction={{
             label: "Add Money",
@@ -30,14 +30,14 @@ const TotalBalances: FC = () => {
           title="My portfolio"
           amount={100000}
           subtitle={
-            <span className="flex items-center gap-1 text-success-text text-sm">
+            <>
               <Icon
                 name="icon-arrow-right"
                 size={16}
                 className="-rotate-45 block"
               />
               {formatWithSeparator(11)}%
-            </span>
+            </>
           }
           primaryAction={{
             label: "Invest",
