@@ -1,40 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Shield Payments
 
-## Getting Started
+A frontend UI implementation of a payment dashboard based on the provided Figma design.
 
-First, run the development server:
+## 🛠 Tech Stack
 
-```bash
+- **Next.js 15** – React framework for SSR and SSG.
+- **React 19** – UI library.
+- **Tailwind CSS** – Styling framework.
+- **Recharts** – Charting library for data visualization.
+- **Day.js** – Lightweight date/time manipulation.
+
+## ✨ Features Implemented
+
+- Fully responsive design across mobile and desktop.
+- Navigation between pages as per the Figma design.
+- UI components including dashboard, and pay pages.
+- Transaction details drawer for payment history.
+- Toggle for light/dark mode (functionality not implemented).
+- Custom **404 Page** for non-existing routes.
+
+## 📂 Installation & Setup
+
+To run the project locally, follow these steps:
+
+Clone the repository:
+
+```sh
+git clone https://github.com/KodingNYoung/shield-payments.git
+cd shield-payments
+```
+
+Install dependencies:
+
+```sh
+npm install
+# or
+yarn install
+```
+
+Start the development server:
+
+```sh
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🚀 Deployment
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The application is deployed on Vercel and can be accessed here:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+🔗 **[Live Preview](https://shield-payments.vercel.app/)**
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To deploy manually, follow these steps:
 
-## Learn More
+```sh
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+Alternatively, push to GitHub and connect to Vercel Dashboard for automatic deployment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## 📜 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
