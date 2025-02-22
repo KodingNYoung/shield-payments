@@ -1,10 +1,14 @@
 import { FC } from "@/utils/types"
 import React from "react"
-import PageTitle from "./_components/PageTitle"
 import SidebarToggleButton from "./_components/SidebarToggleButton"
 import SearchBar from "./_components/SearchBar"
 import IconButton from "@/components/molecules/IconButton"
 import Avatar from "@/components/atoms/Avatar"
+import dynamic from "next/dynamic"
+
+const PageTitle = dynamic(() => import("./_components/PageTitle"), {
+  ssr: false,
+})
 
 const Header: FC = () => {
   return (
