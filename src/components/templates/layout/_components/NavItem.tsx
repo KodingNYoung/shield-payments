@@ -28,7 +28,7 @@ const NavItem: FC<Props> = ({ icon, label, link, classNames }) => {
       href={link}
       data-active={isActive}
       className={cls(
-        "flex items-center justify-start gap-3 p-2 rounded-xl group/navitem text-[#717680] data-[active=true]:text-white data-[active=true]:bg-brand-primary",
+        "flex items-center justify-start gap-3 p-2 rounded-xl group/navitem text-[#717680] data-[active=true]:text-white data-[active=true]:bg-brand-primary font-geist",
         classNames?.root
       )}
       onClick={close}

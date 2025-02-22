@@ -19,16 +19,31 @@ export default {
           "border": "#E9EAEB",
           "navitem": "#A4A7AE",
           "page-title": "#414651",
-          "page-title-darker": "#292D32",
+          "header": "#292D32",
           "close-btn": "#6B7280",
           "dark-mode-toggle": "#EBEBEB",
+          "table-data": "#4B5563",
+        },
+        neutral: {
+          "badge": "#374151",
+          "badge-border": "#E5E7EB",
         },
         error: {
-          notification: "#FE4848",
+          "notification": "#FE4848",
+          "badge": "#F45D48",
+          "badge-border": "#F9AEA3",
+          "badge-bg": "#FDDFDA",
+        },
+        success: {
+          "text": "#5CAAAA",
+          "badge": "#458787",
+          "badge-border": "#ADD5D5",
+          "badge-bg": "#F7FCFC",
         },
       },
       borderRadius: {
         x10: "0.625rem", // 10px
+        x20: "1.25rem", // 20px
       },
     },
   },

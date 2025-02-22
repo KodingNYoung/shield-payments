@@ -1,5 +1,7 @@
+import Dashboard from "@/components/views/dashboard"
+
 const HomePage = () => {
-  return <div>HomePage</div>
+  return <Dashboard />
 }
 
 export default HomePage

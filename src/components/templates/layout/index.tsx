@@ -7,9 +7,9 @@ import { SidebarProvider } from "@/providers/sidebarProvider"
 const Layout: FC = ({ children }) => {
   return (
     <SidebarProvider>
-      <div className="flex min-h-screen dark">
+      <div className="flex min-h-screen">
         <Sidebar />
-        <div className="pl-0 md:pl-[250px] w-full">
+        <div className="pl-0 md:pl-[250px] flex-1">
           <Header />
           {children}
         </div>

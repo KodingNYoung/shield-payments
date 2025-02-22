@@ -17,7 +17,7 @@ const PageTitle: FC = () => {
   const pathname = usePathname()
 
   return (
-    <h1 className="text-2xl font-medium font-geist text-brand-page-title-darker md:text-brand-page-title">
+    <h1 className="text-2xl font-medium font-geist text-brand-header md:text-brand-page-title">
       {pathTitleMap[pathname]}
     </h1>
   )

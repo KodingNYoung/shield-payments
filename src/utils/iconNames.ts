@@ -1,6 +1,6 @@
 export type IconNames =
   | "icon-activity"
-  | "icon-arrow-down"
+  | "icon-arrow-right"
   | "icon-bitcoin-btc"
   | "icon-card-pos"
   | "icon-category"
